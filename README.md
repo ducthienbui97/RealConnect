@@ -41,23 +41,41 @@ Hook into the facebook api and analyze the type of group it is and align best pl
 > note that harry has an offline copy of (almost) all the external docs on his iPad (not api docs)
 
 u: `fb`
+
 e: `h1220325@nwytg.com` (no access) || `xxj59903@mziqo.com` (no access)
+
 p: `FBhack2018`
+
+
+
+google credentials:
+
+e: `fb.hack.2018.syd@gmail.com`
+
+p: `FBhack2018!`
+
+facebook credentials:
+
+e: `fb.hack.2018.syd@gmail.com`
+
+p: `FBhack2018!`
+
 
 #### APIs
 - Facebook
-	- api key = `NONE`
+	- app id = `583714395340320`
+	- app secret = `d5b5ab85dd654f2617cf94d61b97b20b`
 	- graph: [`https://developers.facebook.com/docs/graph-api`](https://developers.facebook.com/docs/graph-api)
 	- pages: [`https://developers.facebook.com/docs/pages`](https://developers.facebook.com/docs/pages) (***may be difficult as a review process is involved***)
 - Google Maps
-	- api key = `NONE`
+	- api key = `AIzaSyB2ubLm9h8RrWVM7dgNh9GC1bxcNynWPl0`
 	- js docs: [`https://developers.google.com/maps/documentation/javascript/tutorial`](https://developers.google.com/maps/documentation/javascript/tutorial)
 - Google Places
-	- api key = `NONE`
+	- api key = `AIzaSyB2ubLm9h8RrWVM7dgNh9GC1bxcNynWPl0`
 	- node.js docs: [`https://googlemaps.github.io/google-maps-services-js/docs/`](https://googlemaps.github.io/google-maps-services-js/docs/)
 	- python docs: [`https://googlemaps.github.io/google-maps-services-python/docs/`](https://googlemaps.github.io/google-maps-services-python/docs/)
 - Google Calendar
-	- api key = `NONE`
+	- api key = `AIzaSyB2ubLm9h8RrWVM7dgNh9GC1bxcNynWPl0`
 	- node.js docs: [`https://developers.google.com/calendar/quickstart/nodejs`](https://developers.google.com/calendar/quickstart/nodejs)
 	- python docs: [`https://developers.google.com/calendar/quickstart/python`](https://developers.google.com/calendar/quickstart/python)
 - Foursquare
