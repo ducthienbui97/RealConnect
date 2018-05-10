@@ -10,7 +10,8 @@
 Aggregate a bunch of data regarding restaurants (google places, tip advisor, zomato, etc) and help people find the best place to have a meal with friends.
 Hook into the facebook api and analyze the type of group it is and align best places to eat. Based on location, type of food etc.
 
-## the stack TBA
+## the stack
+*TBA*
 #### frontend
 - Vue.js web app
 
@@ -20,7 +21,7 @@ Hook into the facebook api and analyze the type of group it is and align best pl
 - requests
 
 ## docs
-> our docs go here
+- deployment: [`http://fbhack2018.surge.sh/`](http://fbhack2018.surge.sh/)
 
 ## external docs
 #### frontend
@@ -39,6 +40,10 @@ Hook into the facebook api and analyze the type of group it is and align best pl
 
 > note that harry has an offline copy of (almost) all the external docs on his iPad (not api docs)
 
+u: `fb`
+e: `h1220325@nwytg.com` (no access) || `xxj59903@mziqo.com` (no access)
+p: `FBhack2018`
+
 #### APIs
 - Facebook
 	- api key = `NONE`
@@ -56,17 +61,21 @@ Hook into the facebook api and analyze the type of group it is and align best pl
 	- node.js docs: [`https://developers.google.com/calendar/quickstart/nodejs`](https://developers.google.com/calendar/quickstart/nodejs)
 	- python docs: [`https://developers.google.com/calendar/quickstart/python`](https://developers.google.com/calendar/quickstart/python)
 - Foursquare
-	- api key = `NONE`
+	- client id: `ZMNAVZJ4FT14MFEB12XZSCPGW4J4BSGZVNNPEFW5FM3J53HH`
+	- client secret: `0AIMCJHR1WUYGGUCMWS0AMWNTCKZJMQAWFREGGOUYSR3JGLT`
 	- basic docs: [`https://developer.foursquare.com/docs/api/getting-started#6-make-your-first-api-call`](https://developer.foursquare.com/docs/api/getting-started#6-make-your-first-api-call)
 	- all endpoints: [`https://developer.foursquare.com/docs/api/endpoints`](https://developer.foursquare.com/docs/api/endpoints)
 - Yelp
-	- api key = `NONE`
+	- client id = `QauKALZyyaNj9SO6RKiY1Q`
+	- api key = `EU8woGIBUQCwNd_U2NQlTjbtTVwsxyhYD-R0NUoLirp1BVQANYJwNyzhFveaNnKN9SLKra0ZL-igg1VjWPyoHPFfXyFnSMUDRTdHewActRWsC7-DsSAXyBb81hr0WnYx`
 	- business search docs: [`https://www.yelp.com.au/developers/documentation/v3/business_search`](https://www.yelp.com.au/developers/documentation/v3/business_search)
 	- business details docs: [`https://www.yelp.com.au/developers/documentation/v3/business`](https://www.yelp.com.au/developers/documentation/v3/business)
 	- business match docs: [`https://www.yelp.com.au/developers/documentation/v3/business_match`](https://www.yelp.com.au/developers/documentation/v3/business_match)
 	- autocomplete docs: [`https://www.yelp.com.au/developers/documentation/v3/autocomplete`](https://www.yelp.com.au/developers/documentation/v3/autocomplete)
 - Zomato
-	- api key = `NONE`
+	- api key = `1cfac169445efa700b5ac7100d476a35`
 	- docs: [`https://developers.zomato.com/documentation`](https://developers.zomato.com/documentation)
-- TripAdvisor ***Their content api is looks like it would be more trouble than it would be worth.***
-- OpenTable ***Requires application process that looks like its handled on a case-by-case basis***
+- TripAdvisor
+	- ***Their content api is looks like it would be more trouble than it would be worth.***
+- OpenTable
+	- ***Requires application process that looks like its handled on a case-by-case basis***
