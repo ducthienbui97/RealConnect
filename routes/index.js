@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/auth/facebook',
-    passport.authenticate('facebook', { scope: ['email','user_hometown','user_friends','user_gender','user_location'] })
+    passport.authenticate('facebook', { scope: ['email','user_friends','user_location'] })
 );
 
 router.get('/auth/facebook/callback',
