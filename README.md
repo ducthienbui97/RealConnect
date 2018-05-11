@@ -40,60 +40,53 @@ Hook into the facebook api and analyze the type of group it is and align best pl
 
 > note that harry has an offline copy of (almost) all the external docs on his iPad (not api docs)
 
-u: `fb`
+### credentials
+##### foursquare, yelp, zomato
+- email: `h1220325@nwytg.com` (**no access**)
+- email: `xxj59903@mziqo.com` (**no access**)
+- password: `FBhack2018`
 
-e: `h1220325@nwytg.com` (no access) || `xxj59903@mziqo.com` (no access)
+##### google
+- email: `fb.hack.2018.syd@gmail.com`
+- password: `FBhack2018!`
 
-p: `FBhack2018`
-
-
-
-google credentials:
-
-e: `fb.hack.2018.syd@gmail.com`
-
-p: `FBhack2018!`
-
-facebook credentials:
-
-e: `fb.hack.2018.syd@gmail.com`
-
-p: `FBhack2018!`
-
+##### facebook
+- email: `fb.hack.2018.syd@gmail.com`
+- password: `FBhack2018!`
 
 #### APIs
-- Facebook
+- **Facebook**
 	- app id = `583714395340320`
 	- app secret = `d5b5ab85dd654f2617cf94d61b97b20b`
 	- graph: [`https://developers.facebook.com/docs/graph-api`](https://developers.facebook.com/docs/graph-api)
 	- pages: [`https://developers.facebook.com/docs/pages`](https://developers.facebook.com/docs/pages) (***may be difficult as a review process is involved***)
-- Google Maps
+- **Google Maps**
 	- api key = `AIzaSyB2ubLm9h8RrWVM7dgNh9GC1bxcNynWPl0`
 	- js docs: [`https://developers.google.com/maps/documentation/javascript/tutorial`](https://developers.google.com/maps/documentation/javascript/tutorial)
-- Google Places
+- **Google Places**
 	- api key = `AIzaSyB2ubLm9h8RrWVM7dgNh9GC1bxcNynWPl0`
 	- node.js docs: [`https://googlemaps.github.io/google-maps-services-js/docs/`](https://googlemaps.github.io/google-maps-services-js/docs/)
 	- python docs: [`https://googlemaps.github.io/google-maps-services-python/docs/`](https://googlemaps.github.io/google-maps-services-python/docs/)
-- Google Calendar
+- **Google Calendar**
 	- api key = `AIzaSyB2ubLm9h8RrWVM7dgNh9GC1bxcNynWPl0`
 	- node.js docs: [`https://developers.google.com/calendar/quickstart/nodejs`](https://developers.google.com/calendar/quickstart/nodejs)
 	- python docs: [`https://developers.google.com/calendar/quickstart/python`](https://developers.google.com/calendar/quickstart/python)
-- Foursquare
+- **Foursquare**
 	- client id: `ZMNAVZJ4FT14MFEB12XZSCPGW4J4BSGZVNNPEFW5FM3J53HH`
 	- client secret: `0AIMCJHR1WUYGGUCMWS0AMWNTCKZJMQAWFREGGOUYSR3JGLT`
 	- basic docs: [`https://developer.foursquare.com/docs/api/getting-started#6-make-your-first-api-call`](https://developer.foursquare.com/docs/api/getting-started#6-make-your-first-api-call)
 	- all endpoints: [`https://developer.foursquare.com/docs/api/endpoints`](https://developer.foursquare.com/docs/api/endpoints)
-- Yelp
+- **Yelp**
 	- client id = `QauKALZyyaNj9SO6RKiY1Q`
 	- api key = `EU8woGIBUQCwNd_U2NQlTjbtTVwsxyhYD-R0NUoLirp1BVQANYJwNyzhFveaNnKN9SLKra0ZL-igg1VjWPyoHPFfXyFnSMUDRTdHewActRWsC7-DsSAXyBb81hr0WnYx`
 	- business search docs: [`https://www.yelp.com.au/developers/documentation/v3/business_search`](https://www.yelp.com.au/developers/documentation/v3/business_search)
 	- business details docs: [`https://www.yelp.com.au/developers/documentation/v3/business`](https://www.yelp.com.au/developers/documentation/v3/business)
 	- business match docs: [`https://www.yelp.com.au/developers/documentation/v3/business_match`](https://www.yelp.com.au/developers/documentation/v3/business_match)
 	- autocomplete docs: [`https://www.yelp.com.au/developers/documentation/v3/autocomplete`](https://www.yelp.com.au/developers/documentation/v3/autocomplete)
-- Zomato
+- **Zomato**
 	- api key = `1cfac169445efa700b5ac7100d476a35`
 	- docs: [`https://developers.zomato.com/documentation`](https://developers.zomato.com/documentation)
-- TripAdvisor
+- **TripAdvisor**
 	- ***Their content api is looks like it would be more trouble than it would be worth.***
-- OpenTable
+- **OpenTable**
 	- ***Requires application process that looks like its handled on a case-by-case basis***
