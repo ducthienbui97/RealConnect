@@ -24,7 +24,9 @@ class Restaurant extends Component {
             <CardContent>
               <StarRatings
                 rating={this.props.rating}
-                starRatedColor="blue"
+                starRatedColor="red"
+                widgetDimensions="40px"
+                widgetSpacings="15px"
               />
             </CardContent>
           </div>
