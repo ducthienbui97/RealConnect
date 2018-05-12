@@ -54,7 +54,7 @@ class Restaurant extends Component {
           />
           <div className={classes.details}>
             <CardContent>
-              <Typography variant="Display 1">{this.props.name}</Typography>
+              <Typography variant="Display 1"><a href={this.props.url}>{this.props.name}</a></Typography>
               <Typography variant="Display 2">{this.props.address}</Typography>
               <StarRatings
                 rating={this.props.rating}
