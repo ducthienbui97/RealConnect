@@ -167,7 +167,7 @@ export default class App extends Component {
       return (
         <Grid>
           <Row className="show-grid">
-            <Col xs={6} xsOffset={3} md={4} mdOffset={4}>
+            <Col xs={8} xsOffset={2} md={6} mdOffset={3}>
               {Login}
             </Col>
           </Row>
@@ -177,12 +177,12 @@ export default class App extends Component {
       return (
         <Grid>
           <Row className="show-grid">
-            <Col xs={6} xsOffset={3} md={4} mdOffset={4}>
+            <Col xs={8} xsOffset={2} md={6} mdOffset={3}>
               <div>{Calendars}</div>
             </Col>
           </Row>
           <Row className="show-grid">
-            <Col md={6} mdOffset={3}>
+            <Col xs={8} xsOffset={2} md={6} mdOffset={3}>
               <div>
                 {this.state.friendList.map((friend, idx) => {
                   return (
@@ -226,7 +226,7 @@ export default class App extends Component {
       return (
         <Grid>
           <Row className="show-grid">
-            <Col xs={6} xsOffset={3} md={4} mdOffset={4}>
+            <Col xs={8} xsOffset={2} md={6} mdOffset={3}>
               {this.state.restaurants.map((restaurant, idx) => {
                 return (
                   <a href={restaurant.url}>
@@ -235,6 +235,7 @@ export default class App extends Component {
                       key={idx}
                       url={restaurant.image_url}
                       rating={restaurant.rating}
+                      address={','.join(restaurant.location.display_address)}
                     />
                   </a>
                 );
