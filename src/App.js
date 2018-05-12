@@ -16,10 +16,6 @@ import axios from "axios";
 import Restaurant from "./Restaurant";
 import FacebookLogin from 'react-facebook-login';
 
-const responseFacebook = (response) => {
-  console.log(response);
-}
-
 const distance = (lat1, lon1, lat2, lon2) => {
   let R = 6371e3; // metres
   let phi1 = lat1 * (Math.PI / 180);
@@ -55,6 +51,29 @@ export default class App extends Component {
   }
   onChangeStart = startTime => this.setState({ startTime });
   onChangeFinish = endTime => this.setState({ endTime });
+  responseFacebook = (response) => {
+    this.setState(
+      {
+        user:{
+          id:response.id,
+          email:response.email,
+          name:response.name,
+          imageURL:response.picture.data.url,
+          lat: -33.868944,
+          lng: 151.2066781
+        }
+      },
+      () => {
+        const geolocation = window.navigator.geolocation;
+        let user = this.state.user;
+        geolocation.getCurrentPosition(position => {
+          user.lat = position.coords.latitude;
+          user.lng = position.coords.longitude;
+          this.setState({ user });
+        });
+      }
+    );
+  },
   getFriend = e => {
     e.preventDefault();
     const friendList = [
@@ -97,31 +116,6 @@ export default class App extends Component {
     ];
     this.setState({ friendList });
   };
-  login = e => {
-    e.preventDefault();
-
-    this.setState(
-      {
-        user: {
-          id: 1,
-          name: "Thien Bui",
-          imageURL:
-            "https://avatars2.githubusercontent.com/u/10867758?s=460&v=4",
-          lat: -33.868944,
-          lng: 151.2066781
-        }
-      },
-      () => {
-        const geolocation = window.navigator.geolocation;
-        let user = this.state.user;
-        geolocation.getCurrentPosition(position => {
-          user.lat = position.coords.latitude;
-          user.lng = position.coords.longitude;
-          this.setState({ user });
-        });
-      }
-    );
-  };
 
   render() {
     const Login = (
@@ -129,7 +123,7 @@ export default class App extends Component {
         appId="404712883272358"
         autoLoad={true}
         fields="name,email,picture"
-        callback={responseFacebook} />
+        callback={this.responseFacebook} />
     );
     const Calendars = (
       <form>
