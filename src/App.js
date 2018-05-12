@@ -209,8 +209,8 @@ export default class App extends Component {
                         friend.lat,
                         friend.lng
                       )}
-                      from={max(friend.from,this.state.startTime)}
-                      to={min(friend.to,this.state.endTime)}
+                      from={Math.max(friend.from,this.state.startTime)}
+                      to={Math.min(friend.to,this.state.endTime)}
                       style={{ padding: 2 }}
                     />
                   );
