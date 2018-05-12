@@ -35,6 +35,7 @@ class Restaurant extends Component {
   }
   render() {
     console.log(this.props);
+    const { classes, theme } = props;
     return (
       <div>
         <Card className={classes.card}>
