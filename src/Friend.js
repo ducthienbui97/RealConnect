@@ -17,7 +17,7 @@ class Friend extends Component {
           title={this.props.user.name}
         >
           <p>{Math.floor(this.props.distance)} meters away!</p>
-          <p>Overlap free time: {this.props.from} to {this.props.to}</p>
+          <p>Overlap free time: {new Date(this.props.from).toLocaleDateString()} to {new Date(this.props.to).toLocaleDateString()}</p>
         </Popover>
       </div>
     );

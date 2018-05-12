@@ -138,7 +138,7 @@ export default class App extends Component {
     this.setState({
       friendList: friendList.filter(
         user =>
-          found.friends.includes(user.id) &&
+          user !== found && found.friends.includes(user.id) &&
           !(this.state.startTime > user.to || this.state.endTime < user.from)
       )
     });
