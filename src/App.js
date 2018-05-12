@@ -136,8 +136,10 @@ export default class App extends Component {
       user => this.state.user.name.indexOf(user.name) !== -1
     );
     this.setState({
-      friendList: friendList.filter(user =>
-        this.state.user.friends.includes(user.id) || !(this.state.startTime > user.to || this.state.endTime < user.from)
+      friendList: friendList.filter(
+        user =>
+          this.state.user.friends.includes(user.id) &&
+          !(this.state.startTime > user.to || this.state.endTime < user.from)
       )
     });
   };
@@ -209,8 +211,8 @@ export default class App extends Component {
                         friend.lat,
                         friend.lng
                       )}
-                      from={Math.max(friend.from,this.state.startTime)}
-                      to={Math.min(friend.to,this.state.endTime)}
+                      from={Math.max(friend.from, this.state.startTime)}
+                      to={Math.min(friend.to, this.state.endTime)}
                       style={{ padding: 2 }}
                     />
                   );
