@@ -39,7 +39,7 @@ class Restaurant extends Component {
     console.log(this.props);
     const { classes, theme } = this.props;
     return (
-      <div>
+      <div style={{margin:2}}>
         <Card className={classes.card}>
           <CardMedia
             className={classes.cover}

@@ -20,7 +20,7 @@ class Friend extends Component {
           placement="right"
           positionLeft={200}
           style={{
-            width: 350
+            width: 400
           }}
           positionTop={this.props.idx * 180 + 50}
           title={this.props.user.name}
