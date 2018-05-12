@@ -124,7 +124,7 @@ export default class App extends Component {
     ];
     this.setState({
       friendList: friendList.filter(
-        user => !this.state.user.name.contains(user.name)
+        user => this.state.user.name.indexOf(user.name) === -1
       )
     });
   };
