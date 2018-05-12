@@ -446,11 +446,9 @@ router.get("/", function(req, res, next) {
 });
 
 router.post("/webhook", (req,res) => {
-  console.log("X");
   let body = req.body;
-  console.log(req.body);
   if (body.object === 'page') {
-
+    console.log(body.entry);
     // Iterates over each entry - there may be multiple if batched
     body.entry.forEach(function(entry) {
 
