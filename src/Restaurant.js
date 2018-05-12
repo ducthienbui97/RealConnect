@@ -40,6 +40,12 @@ class Restaurant extends Component {
     return (
       <div>
         <Card className={classes.card}>
+          <CardMedia
+            className={classes.cover}
+            image={this.props.url}
+            title="Live from space album cover"
+            style={{ width: 180, height: 180 }}
+          />
           <div  className={classes.details}>
             <CardContent>
               <Typography variant="headline">{this.props.name}</Typography>
@@ -52,12 +58,7 @@ class Restaurant extends Component {
               />
             </CardContent>
           </div>
-          <CardMedia
-            className={classes.cover}
-            image={this.props.url}
-            title="Live from space album cover"
-            style={{ width: 180, height: 180 }}
-          />
+
         </Card>
       </div>
     );
