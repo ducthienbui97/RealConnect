@@ -3,6 +3,7 @@ import Card, { CardContent, CardMedia } from "material-ui/Card";
 import Typography from "material-ui/Typography";
 import StarRatings from "react-star-ratings";
 import { withStyles } from 'material-ui/styles';
+
 const styles = theme => ({
   card: {
     display: "flex"
@@ -48,8 +49,8 @@ class Restaurant extends Component {
           />
           <div  className={classes.details}>
             <CardContent>
-              <Typography variant="headline">{this.props.name}</Typography>
-              <Typography>{this.props.address}</Typography>
+              <Typography variant="Display 1">{this.props.name}</Typography>
+              <Typography variant="Display 2">{this.props.address}</Typography>
               <StarRatings
                 rating={this.props.rating}
                 starRatedColor="red"
