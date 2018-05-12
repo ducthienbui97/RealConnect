@@ -55,8 +55,8 @@ class Restaurant extends Component {
               <StarRatings
                 rating={this.props.rating}
                 starRatedColor="red"
-                widgetDimensions="30px"
-                widgetSpacings="10px"
+                widgetDimensions="20px"
+                widgetSpacings="6px"
               />
               <Button>Invite {this.props.friend}</Button>
             </CardContent>
