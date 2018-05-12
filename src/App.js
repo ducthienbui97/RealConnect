@@ -14,6 +14,11 @@ import {
 import Friend from "./Friend";
 import axios from "axios";
 import Restaurant from "./Restaurant";
+import FacebookLogin from 'react-facebook-login';
+
+const responseFacebook = (response) => {
+  console.log(response);
+}
 
 const distance = (lat1, lon1, lat2, lon2) => {
   let R = 6371e3; // metres
@@ -120,15 +125,11 @@ export default class App extends Component {
 
   render() {
     const Login = (
-      <Button
-        block
-        bsSize="large"
-        type="submit"
-        className="loginBtn loginBtn--facebook"
-        onClick={this.login}
-      >
-        Login with Facebook
-      </Button>
+      <FacebookLogin
+        appId="404712883272358"
+        autoLoad={true}
+        fields="name,email,picture"
+        callback={responseFacebook} />
     );
     const Calendars = (
       <form>
