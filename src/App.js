@@ -102,7 +102,7 @@ export default class App extends Component {
         id: 3,
         name: "Verity",
         imageURL:
-          "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+          "https://scontent.xx.fbcdn.net/v/t1.0-9/20637875_1724964721140348_1979654844065454056_n.jpg?_nc_cat=0&_nc_eui2=AeENaGKT8cB9FOfMaPuQ_1T0lAqnC-zKiu7OBUJKEmHgtvg2acPQyXD_5qLADZ4jEWL96NShYcQRv8QXnpjDQG-RPfLnfl37QoZBemJULacoug&oh=604a11e24c304d7479d1498bce392d02&oe=5B520106",
         lat: -33.8944,
         lng: 151.2078,
         friends: [1, 4],
