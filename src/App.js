@@ -196,6 +196,7 @@ export default class App extends Component {
                         friend.lat,
                         friend.lng
                       )}
+                      style={{padding:2}}
                     />
                   );
                 })};
