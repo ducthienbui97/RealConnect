@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Image, Popover } from "react-bootstrap";
 import Card, { CardContent, CardMedia } from "material-ui/Card";
 import Typography from "material-ui/Typography";
+import StarRatings from 'react-star-ratings';
 
 class Restaurant extends Component {
   constructor(props) {
@@ -20,6 +20,12 @@ class Restaurant extends Component {
           <div>
             <CardContent>
               <Typography variant="headline">{this.props.name}</Typography>
+            </CardContent>
+            <CardContent>
+              <StarRatings
+                rating={this.props.rating}
+                starRatedColor="blue"
+              />
             </CardContent>
           </div>
         </Card>
