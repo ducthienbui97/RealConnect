@@ -252,7 +252,7 @@ export default class App extends Component {
                       key={idx}
                       url={restaurant.image_url}
                       rating={restaurant.rating}
-                      address={(restaurant.location.display_address).join()}
+                      address={(restaurant.location.display_address).join(",")}
                     />
                   </a>
                 );
