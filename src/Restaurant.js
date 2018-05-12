@@ -48,7 +48,7 @@ class Restaurant extends Component {
         <Card className={classes.card}>
           <CardMedia
             className={classes.cover}
-            image={this.props.url}
+            image={this.props.image_url}
             title="Live from space album cover"
             style={{ width: 180, height: 180 }}
           />
