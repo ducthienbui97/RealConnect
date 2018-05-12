@@ -5,7 +5,6 @@ import DateTimePicker from "react-datetime-picker";
 import {
   Button,
   FormGroup,
-  FormControl,
   ControlLabel,
   Grid,
   Row,
@@ -15,7 +14,7 @@ import Friend from "./Friend";
 import axios from "axios";
 import Restaurant from "./Restaurant";
 import FacebookLogin from "react-facebook-login";
-
+import {Datetime} from "react-datetime"
 const distance = (lat1, lon1, lat2, lon2) => {
   let R = 6371e3; // metres
   let phi1 = lat1 * (Math.PI / 180);
@@ -158,7 +157,7 @@ export default class App extends Component {
       <form>
         <FormGroup>
           <ControlLabel> Start Time: </ControlLabel>
-          <DateTimePicker
+          <Datetime
             onChange={this.onChangeStart}
             value={this.state.startTime}
           />
@@ -166,7 +165,7 @@ export default class App extends Component {
         <br />
         <FormGroup>
           <ControlLabel> End Time: </ControlLabel>
-          <DateTimePicker
+          <Datetime
             onChange={this.onChangeFinish}
             value={this.state.endTime}
           />
