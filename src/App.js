@@ -13,7 +13,7 @@ import Friend from "./Friend";
 import axios from "axios";
 import Restaurant from "./Restaurant";
 import FacebookLogin from "react-facebook-login";
-import Datetime from "react-datetime"
+import Datetime from "react-datetime";
 const distance = (lat1, lon1, lat2, lon2) => {
   let R = 6371e3; // metres
   let phi1 = lat1 * (Math.PI / 180);
@@ -164,10 +164,7 @@ export default class App extends Component {
         <br />
         <FormGroup>
           <ControlLabel> End Time: </ControlLabel>
-          <Datetime
-            onChange={this.onChangeFinish}
-            value={this.state.endTime}
-          />
+          <Datetime onChange={this.onChangeFinish} value={this.state.endTime} />
           <br />
           <br />
           <Button type="button" onClick={this.getFriend}>
@@ -244,16 +241,14 @@ export default class App extends Component {
             <Col xs={8} xsOffset={2} md={6} mdOffset={3}>
               {this.state.restaurants.map((restaurant, idx) => {
                 return (
-                  <a href={restaurant.url}>
-                    <Restaurant
-                      name={restaurant.name}
-                      key={idx}
-                      url={restaurant.url}
-                      image_url={restaurant.image_url}
-                      rating={restaurant.rating}
-                      address={(restaurant.location.display_address).join(",")}
-                    />
-                  </a>
+                  <Restaurant
+                    name={restaurant.name}
+                    key={idx}
+                    url={restaurant.url}
+                    image_url={restaurant.image_url}
+                    rating={restaurant.rating}
+                    address={restaurant.location.display_address.join(",")}
+                  />
                 );
               })}
             </Col>
