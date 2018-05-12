@@ -19,6 +19,9 @@ class Friend extends Component {
           id="popover-basic"
           placement="right"
           positionLeft={200}
+          style={{
+            width: 100
+          }}
           positionTop={this.props.idx * 180 + 50}
           title={this.props.user.name}
         >
