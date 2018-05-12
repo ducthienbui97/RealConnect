@@ -111,7 +111,7 @@ export default class App extends Component {
         id: 4,
         name: "Archibald",
         imageURL:
-          "https://scontent.xx.fbcdn.net/v/t1.0-1/p160x160/24775033_1286621468119744_4291381466659175113_n.jpg?_nc_cat=0&oh=e1a8be403da922612cc6dfabadb53bc3&oe=5B53961D",
+          "http://i0.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg",
         lat: -33.8644,
         lng: 151.2081,
         from: new Date("2018-05-12 12:00"),
