@@ -12,24 +12,25 @@ class Restaurant extends Component {
     return (
       <div>
         <Card>
+          <div>
+            <CardContent>
+              <Typography variant="headline">{this.props.name}</Typography>
+            </CardContent>
+            <CardContent>{this.props.address}</CardContent>
+            <CardContent>
+              <StarRatings
+                rating={this.props.rating}
+                starRatedColor="red"
+                widgetDimensions="30px"
+                widgetSpacings="10px"
+              />
+            </CardContent>
+          </div>
           <CardMedia
             image={this.props.url}
             title="Live from space album cover"
             style={{ width: 180, height: 180 }}
           />
-          <div>
-            <CardContent>
-              <Typography variant="headline">{this.props.name}</Typography>
-            </CardContent>
-            <CardContent>
-              <StarRatings
-                rating={this.props.rating}
-                starRatedColor="red"
-                widgetDimensions="40px"
-                widgetSpacings="15px"
-              />
-            </CardContent>
-          </div>
         </Card>
       </div>
     );
