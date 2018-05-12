@@ -3,12 +3,8 @@ import Card, { CardContent, CardMedia } from "material-ui/Card";
 import Typography from "material-ui/Typography";
 import StarRatings from "react-star-ratings";
 import { withStyles } from "material-ui/styles";
-import {
-  FacebookShareButton,
-  TelegramShareButton,
-  WhatsappShareButton,
-  EmailShareButton
-} from "react-share";
+import {Button} from "react-bootstrap";
+
 const styles = theme => ({
   card: {
     display: "flex"
@@ -62,10 +58,7 @@ class Restaurant extends Component {
                 widgetDimensions="30px"
                 widgetSpacings="10px"
               />
-              <FacebookShareButton url={this.props.url} />
-              <TelegramShareButton url={this.props.url} />
-              <WhatsappShareButton url={this.props.url} />
-              <EmailShareButton url={this.props.url} />
+              <Button>Invite {this.props.friend}</Button>
             </CardContent>
           </div>
         </Card>

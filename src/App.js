@@ -242,6 +242,7 @@ export default class App extends Component {
               {this.state.restaurants.map((restaurant, idx) => {
                 return (
                   <Restaurant
+                    friend={this.state.friend.name}
                     name={restaurant.name}
                     key={idx}
                     url={restaurant.url}
