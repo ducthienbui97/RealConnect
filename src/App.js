@@ -14,7 +14,7 @@ import {
 import Friend from "./Friend";
 import axios from "axios";
 import Restaurant from "./Restaurant";
-import FacebookLogin from 'react-facebook-login';
+import FacebookLogin from "react-facebook-login";
 
 const distance = (lat1, lon1, lat2, lon2) => {
   let R = 6371e3; // metres
@@ -45,19 +45,19 @@ export default class App extends Component {
       friendList: [],
       friend: null,
       loading: true,
-      restaurants:[]
+      restaurants: []
     };
   }
   onChangeStart = startTime => this.setState({ startTime });
   onChangeFinish = endTime => this.setState({ endTime });
-  responseFacebook = (response) => {
+  responseFacebook = response => {
     this.setState(
       {
-        user:{
-          id:response.id,
-          email:response.email,
-          name:response.name,
-          imageURL:response.picture.data.url,
+        user: {
+          id: response.id,
+          email: response.email,
+          name: response.name,
+          imageURL: response.picture.data.url,
           lat: -33.868944,
           lng: 151.2066781
         }
@@ -76,6 +76,15 @@ export default class App extends Component {
   getFriend = e => {
     e.preventDefault();
     const friendList = [
+      {
+        id: 1,
+        name: "Thien",
+        imageURL:
+          "https://scontent.xx.fbcdn.net/v/t1.0-9/31523399_1801450289878270_1480533951670183036_n.jpg?_nc_cat=0&_nc_eui2=AeFD6eTheWzQqnEAPyMwp7NDtEQ-8k9FyGJHv8Z5oi_-KLIpveF9Vuz1to0iLrcfFKmxDx-stsQH7da4Hz-CR0w-AWQAj5ZhvS6cY27RANAmDA&oh=ef743e0e12be7f00a7807af97cdaecc4&oe=5B9B0213",
+        lat: -33.868944,
+        lng: 151.2066781,
+        friend: [1, 3, 4, 5]
+      },
       {
         id: 2,
         name: "David",
@@ -113,7 +122,11 @@ export default class App extends Component {
         friends: [1]
       }
     ];
-    this.setState({ friendList });
+    this.setState({
+      friendList: friendList.filter(
+        user => !this.state.user.name.contains(user.name)
+      )
+    });
   };
 
   render() {
@@ -122,7 +135,8 @@ export default class App extends Component {
         appId="404712883272358"
         autoLoad={true}
         fields="name,email,picture"
-        callback={this.responseFacebook} />
+        callback={this.responseFacebook}
+      />
     );
     const Calendars = (
       <form>
