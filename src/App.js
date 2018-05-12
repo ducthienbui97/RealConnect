@@ -83,7 +83,9 @@ export default class App extends Component {
           "https://scontent.xx.fbcdn.net/v/t1.0-9/31523399_1801450289878270_1480533951670183036_n.jpg?_nc_cat=0&_nc_eui2=AeFD6eTheWzQqnEAPyMwp7NDtEQ-8k9FyGJHv8Z5oi_-KLIpveF9Vuz1to0iLrcfFKmxDx-stsQH7da4Hz-CR0w-AWQAj5ZhvS6cY27RANAmDA&oh=ef743e0e12be7f00a7807af97cdaecc4&oe=5B9B0213",
         lat: -33.868944,
         lng: 151.2066781,
-        friend: [1, 3, 4, 5]
+        friends: [1, 3, 4, 5],
+        from: new Date("2018-05-12 12:00"),
+        to: new Date("2018-05-14 23:00")
       },
       {
         id: 2,
@@ -92,7 +94,9 @@ export default class App extends Component {
           "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         lat: -33.868,
         lng: 151.2066,
-        friends: []
+        friends: [],
+        from: new Date("2018-05-12 12:00"),
+        to: new Date("2018-05-12 23:00")
       },
       {
         id: 3,
@@ -101,7 +105,9 @@ export default class App extends Component {
           "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         lat: -33.8944,
         lng: 151.2078,
-        friends: [1, 4]
+        friends: [1, 4],
+        from: new Date("2018-05-12 20:00"),
+        to: new Date("2018-05-12 21:00")
       },
       {
         id: 4,
@@ -110,6 +116,8 @@ export default class App extends Component {
           "https://images.pexels.com/photos/17767/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         lat: -33.8644,
         lng: 151.2081,
+        from: new Date("2018-05-12 12:00"),
+        to: new Date("2018-05-12 23:00"),
         friends: [1, 3]
       },
       {
@@ -119,14 +127,18 @@ export default class App extends Component {
           "https://images.pexels.com/photos/87413/animal-cat-domestic-eye-87413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         lat: -33.868,
         lng: 151.206,
+        from: new Date("2018-05-11 12:00"),
+        to: new Date("2018-05-13 23:00"),
         friends: [1]
       }
     ];
     let found = friendList.find(
       user => this.state.user.name.indexOf(user.name) !== -1
-    )
+    );
     this.setState({
-      friendList: friendList.filter(user => this.state.user.friends.includes(user.id))
+      friendList: friendList.filter(user =>
+        this.state.user.friends.includes(user.id) || !(this.state.startTime > user.to || this.state.endTime < user.from)
+      )
     });
   };
 
@@ -197,7 +209,9 @@ export default class App extends Component {
                         friend.lat,
                         friend.lng
                       )}
-                      style={{padding:2}}
+                      from={max(friend.from,this.state.startTime)}
+                      to={min(friend.to,this.state.endTime)}
+                      style={{ padding: 2 }}
                     />
                   );
                 })};
@@ -235,7 +249,7 @@ export default class App extends Component {
                       key={idx}
                       url={restaurant.image_url}
                       rating={restaurant.rating}
-                      address={','.join(restaurant.location.display_address)}
+                      address={",".join(restaurant.location.display_address)}
                     />
                   </a>
                 );

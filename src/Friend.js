@@ -16,7 +16,8 @@ class Friend extends Component {
           positionTop={this.props.idx * 180 + 50}
           title={this.props.user.name}
         >
-          {Math.floor(this.props.distance)} meters away!
+          <p>{Math.floor(this.props.distance)} meters away!</p>
+          <p>Overlap free time: {this.props.from} to {this.props.to}</p>
         </Popover>
       </div>
     );
