@@ -47,7 +47,6 @@ export default class App extends Component {
       loading: true,
       restaurants:[]
     };
-    this.login = this.login.bind(this);
   }
   onChangeStart = startTime => this.setState({ startTime });
   onChangeFinish = endTime => this.setState({ endTime });
