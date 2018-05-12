@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import DateTimePicker from "react-datetime-picker";
 import {
   Button,
   FormGroup,
@@ -14,7 +13,7 @@ import Friend from "./Friend";
 import axios from "axios";
 import Restaurant from "./Restaurant";
 import FacebookLogin from "react-facebook-login";
-import {Datetime} from "react-datetime"
+import Datetime from "react-datetime"
 const distance = (lat1, lon1, lat2, lon2) => {
   let R = 6371e3; // metres
   let phi1 = lat1 * (Math.PI / 180);
