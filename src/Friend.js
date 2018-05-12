@@ -8,7 +8,13 @@ class Friend extends Component {
   render() {
     return (
       <div>
-        <Image src={this.props.user.imageURL} width={180} height={180} onClick={this.props.onClick}/>
+        <Image
+          src={this.props.user.imageURL}
+          width={180}
+          height={180}
+          onClick={this.props.onClick}
+          style={{ border: 2 }}
+        />
         <Popover
           id="popover-basic"
           placement="right"
@@ -17,7 +23,10 @@ class Friend extends Component {
           title={this.props.user.name}
         >
           <p>{Math.floor(this.props.distance)} meters away!</p>
-          <p>Overlap free time: {new Date(this.props.from).toLocaleDateString()} to {new Date(this.props.to).toLocaleDateString()}</p>
+          <p>
+            Overlap free time: {new Date(this.props.from).toLocaleString()} to{" "}
+            {new Date(this.props.to).toLocaleString()}
+          </p>
         </Popover>
       </div>
     );
