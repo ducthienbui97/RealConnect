@@ -73,7 +73,7 @@ export default class App extends Component {
         });
       }
     );
-  },
+  };
   getFriend = e => {
     e.preventDefault();
     const friendList = [
