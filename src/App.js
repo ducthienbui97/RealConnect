@@ -83,7 +83,7 @@ export default class App extends Component {
           "https://scontent.xx.fbcdn.net/v/t1.0-9/31523399_1801450289878270_1480533951670183036_n.jpg?_nc_cat=0&_nc_eui2=AeFD6eTheWzQqnEAPyMwp7NDtEQ-8k9FyGJHv8Z5oi_-KLIpveF9Vuz1to0iLrcfFKmxDx-stsQH7da4Hz-CR0w-AWQAj5ZhvS6cY27RANAmDA&oh=ef743e0e12be7f00a7807af97cdaecc4&oe=5B9B0213",
         lat: -33.868944,
         lng: 151.2066781,
-        friends: [1, 3, 4, 5],
+        friends: [3, 4, 5],
         from: new Date("2018-05-12 12:00"),
         to: new Date("2018-05-14 23:00")
       },
@@ -113,7 +113,7 @@ export default class App extends Component {
         id: 4,
         name: "Archibald",
         imageURL:
-          "https://images.pexels.com/photos/17767/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+          "https://scontent.xx.fbcdn.net/v/t1.0-1/p160x160/24775033_1286621468119744_4291381466659175113_n.jpg?_nc_cat=0&oh=e1a8be403da922612cc6dfabadb53bc3&oe=5B53961D",
         lat: -33.8644,
         lng: 151.2081,
         from: new Date("2018-05-12 12:00"),
@@ -138,7 +138,8 @@ export default class App extends Component {
     this.setState({
       friendList: friendList.filter(
         user =>
-          user !== found && found.friends.includes(user.id) &&
+          user !== found &&
+          found.friends.includes(user.id) &&
           !(this.state.startTime > user.to || this.state.endTime < user.from)
       )
     });
