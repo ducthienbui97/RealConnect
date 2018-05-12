@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Card, { CardContent, CardMedia } from "material-ui/Card";
 import Typography from "material-ui/Typography";
 import StarRatings from "react-star-ratings";
+import { withStyles } from 'material-ui/styles';
 const styles = theme => ({
   card: {
     display: "flex"
@@ -35,7 +36,7 @@ class Restaurant extends Component {
   }
   render() {
     console.log(this.props);
-    const { classes, theme } = props;
+    const { classes, theme } = this.props;
     return (
       <div>
         <Card className={classes.card}>
@@ -63,10 +64,6 @@ class Restaurant extends Component {
   }
 }
 
-MediaControlCard.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles, { withTheme: true })(Restaurant);
 
