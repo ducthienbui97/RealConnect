@@ -122,10 +122,11 @@ export default class App extends Component {
         friends: [1]
       }
     ];
+    let found = friendList.find(
+      user => this.state.user.name.indexOf(user.name) !== -1
+    )
     this.setState({
-      friendList: friendList.filter(
-        user => this.state.user.name.indexOf(user.name) === -1
-      )
+      friendList: friendList.filter(user => this.state.user.friends.includes(user.id))
     });
   };
 
